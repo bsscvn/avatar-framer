@@ -1,10 +1,10 @@
 <div>
   <div>
-    <ol class="instructions mt-10">
-      <li class="text-lg leading-5 font-medium">
+    <ol class="mt-10 instructions">
+      <li class="text-lg font-medium leading-5">
         {{ site.step-1 }}
 
-          <div id="upload" class="mt-4 p-6 w-full bg-gray-100 text-center rounded cursor-pointer hover:text-secondary hover:underline transition duration-500 ease-in-out">
+          <div id="upload" class="w-full p-6 mt-4 text-center transition duration-500 ease-in-out bg-gray-100 rounded cursor-pointer hover:text-secondary hover:underline">
             <span id="upload-text">{{ site.upload-text }}</span>
           </div>
 
@@ -12,27 +12,27 @@
           <!-- <form action="/file-upload" class="dropzone" id="uploadImg"></form> -->
       </li>
 
-      <li class="text-lg leading-5 font-medium pt-12">
+      <li class="pt-12 text-lg font-medium leading-5">
         {{ site.step-2 }}
       </li>
       
-      <li class="hidden text-lg leading-5 font-medium pt-12">
+      <li style="display: none;" class="hidden pt-12 text-lg font-medium leading-5">
         {{ site.step-3 }}
 
-        <div class="mt-4 grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-3 gap-4 mt-4">
             {% for image in site.static_files %}
                 {% if image.path contains 'previews/' %}
                     {% assign imagepath = image.path | split: "/" | last %}
-                    <img id="frame-{{ image.basename | split: '-' | last }}" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-xl transition duration-300 ease-in-out cursor-pointer hover:border-primary" src="img/previews/{{ image.name }}" alt="">
+                    <img id="frame-{{ image.basename | split: '-' | last }}" class="inline-block object-contain w-full transition duration-300 ease-in-out border-2 border-gray-100 rounded-full shadow-xl cursor-pointer max-w-6 hover:border-primary" src="img/previews/{{ image.name }}" alt="">
                 {% endif %}
             {% endfor %}
         </div>
       </li>
 
-      <li class="text-lg leading-5 font-medium pt-12">
+      <li class="pt-12 text-lg font-medium leading-5">
         {{ site.step-4 }}
 
-        <button class="block max-w-56 mt-4 px-8 py-5 rounded bg-primary text-white text-sm font-bold text-center" id="download" disabled>
+        <button class="block px-8 py-5 mt-4 text-sm font-bold text-center text-white rounded max-w-56 bg-primary" id="download" disabled>
           {{ site.download-button-text }}
         </button>
       </li>              
