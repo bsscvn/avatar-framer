@@ -58,16 +58,16 @@ footer-links:
 
 # Open Graph and Twitter Cards
 #
-og-title: Tạo avatar Vietnam Startup Day 2021
-og-description: Tạo avatar Vietnam Startup Day 2021
+og-title: Tạo avatar Vietnam Startup Day 2022
+og-description: Tạo avatar Vietnam Startup Day 2022
 og-url: https://avatar.bssc.vn/
 og-image: "og-image.png"
 og-image-width: 1280
 og-image-height: 640
 twitter-card: summary_large_image
-twitter-description: Tạo avatar Vietnam Startup Day 2021
+twitter-description: Tạo avatar Vietnam Startup Day 2022
 twitter-image: "og-image.png"
-twitter-handle: "@AndrewQuinn2"
+twitter-handle: "@bssc_vietnam"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
